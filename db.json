@@ -1,0 +1,52 @@
+{
+  "omok": [
+    {
+      "id": 0,
+      "axis": [
+        { "id": 0, "did": false, "player": "none"},
+        { "id": 1, "did": false, "player": "none"},
+        { "id": 2, "did": false, "player": "none"},
+        { "id": 3, "did": false, "player": "none"},
+        { "id": 4, "did": false, "player": "none"},
+        { "id": 5, "did": false, "player": "none"},
+        { "id": 6, "did": false, "player": "none"},
+        { "id": 7, "did": false, "player": "none"},
+        { "id": 8, "did": false, "player": "none"},
+        { "id": 9, "did": false, "player": "none"},
+        { "id": 10, "did": false, "player": "none"}
+      ]
+    },
+    {
+      "id": 1,
+      "axis": [
+        { "id": 0, "did": false, "player": "none"},
+        { "id": 1, "did": false, "player": "none"},
+        { "id": 2, "did": false, "player": "none"},
+        { "id": 3, "did": false, "player": "none"},
+        { "id": 4, "did": false, "player": "none"},
+        { "id": 5, "did": false, "player": "none"},
+        { "id": 6, "did": false, "player": "none"},
+        { "id": 7, "did": false, "player": "none"},
+        { "id": 8, "did": false, "player": "none"},
+        { "id": 9, "did": false, "player": "none"},
+        { "id": 10, "did": false, "player": "none"}
+      ]
+    },
+    {
+      "id": 2,
+      "axis": [
+        { "id": 0, "did": false, "player": "none"},
+        { "id": 1, "did": false, "player": "none"},
+        { "id": 2, "did": false, "player": "none"},
+        { "id": 3, "did": false, "player": "none"},
+        { "id": 4, "did": false, "player": "none"},
+        { "id": 5, "did": false, "player": "none"},
+        { "id": 6, "did": false, "player": "none"},
+        { "id": 7, "did": false, "player": "none"},
+        { "id": 8, "did": false, "player": "none"},
+        { "id": 9, "did": false, "player": "none"},
+        { "id": 10, "did": false, "player": "none"}
+      ]
+    }
+  ]
+}

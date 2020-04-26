@@ -1,0 +1,26 @@
+{
+  "name": "omok",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angryboo/omok.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angryboo/omok/issues"
+  },
+  "homepage": "https://github.com/angryboo/omok#readme",
+  "devDependencies": {
+    "json-server": "^0.16.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
