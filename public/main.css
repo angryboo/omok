@@ -42,3 +42,30 @@ main {
 .go-data > div {
   cursor: pointer;
 }
+
+.go-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stone {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: none;
+}
+
+.stone.none {
+  display: none;
+}
+
+.stone.black {
+  display: block;
+  background: radial-gradient(ellipse at center, #747474 0%, #353535 80%, #000000 100%);
+}
+
+.stone.white {
+  display: block;
+  background: radial-gradient(ellipse at center, #ffffff 0%, #c4c4c4 80%, #747474 100%);
+}

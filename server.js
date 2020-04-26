@@ -138,18 +138,6 @@ let omok = [
   { yaxis: 10, xaxis: 8, did: false, player: 'none' },
   { yaxis: 10, xaxis: 9, did: false, player: 'none' },
   { yaxis: 10, xaxis: 10, did: false, player: 'none' },
-
-  { yaxis: 7, xaxis: 0, did: false, player: 'none' },
-  { yaxis: 7, xaxis: 1, did: false, player: 'none' },
-  { yaxis: 7, xaxis: 2, did: false, player: 'none' },
-  { yaxis: 7, xaxis: 3, did: false, player: 'none' },
-  { yaxis: 7, xaxis: 4, did: false, player: 'none' },
-  { yaxis: 7, xaxis: 5, did: false, player: 'none' },
-  { yaxis: 7, xaxis: 6, did: false, player: 'none' },
-  { yaxis: 7, xaxis: 7, did: false, player: 'none' },
-  { yaxis: 7, xaxis: 8, did: false, player: 'none' },
-  { yaxis: 7, xaxis: 9, did: false, player: 'none' },
-  { yaxis: 7, xaxis: 10, did: false, player: 'none' },
 ];
 
 
