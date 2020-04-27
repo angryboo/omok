@@ -140,6 +140,9 @@ let omok = [
   { yaxis: 10, xaxis: 10, did: false, player: 'none' },
 ];
 
+let turn = [
+  { player: 'black' }
+];
 
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
@@ -189,6 +192,13 @@ app.get('/omok/didt', (req, res) => {
 });
 
 
+// 현재 플레이어 객체 반환
+app.get('/turn', (req, res) => {
+  console.log('[GET]');
+  res.send(...turn);
+});
+
+
 // 정보 업데이트
 app.patch('/omok/:yaxis/:xaxis', (req, res) => {
   const { yaxis, xaxis } = req.params;
@@ -202,6 +212,11 @@ app.patch('/omok/:yaxis/:xaxis', (req, res) => {
   res.send(omok);
 });
 
+
+app.patch('/turn', (req, res) => {
+  turn = [{ player: turn[0].player === 'black' ? 'white' : 'black' }];
+  res.send(...turn);
+});
 
 // 전체 초기화
 app.patch('/omok/init', (req, res) => {
