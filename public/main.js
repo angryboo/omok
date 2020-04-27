@@ -25,10 +25,9 @@ const setStone = () => {
 };
 
 
-const checkOmok = () => {
+// 횡방향 check 함수
+const checkOmokHzt = () => {
   let hzt = [];
-  let vtl = [];
-
   // 횡방향 check
   for (let i = 0; i < checkArray.length; i++) {
     for (let j = 1; j < checkArray[i].length; j++) {
@@ -54,10 +53,57 @@ const checkOmok = () => {
       }
     }
   }
-  console.log(hzt);
 };
 
-// 승태 확인용 배열 획득
+
+// 종방향 check 함수
+const checkOmokVtl = () => {
+  let vtl = [];
+  // 종방향 check
+  for (let i = 0; i < checkArray.length; i++) {
+    for (let j = 1; j < checkArray[i].length; j++) {
+      if (checkArray[j][i] !== 'none' && checkArray[j][i] === checkArray[j - 1][i]) {
+        vtl = vtl.length === 0 ? [...vtl, {
+          player: checkArray[j - 1][i],
+          yaxis: i,
+          xaxis: j - 1
+        }, {
+          player: checkArray[j][i],
+          yaxis: i,
+          xaxis: j
+        }] : [...vtl, {
+          player: checkArray[j][i],
+          yaxis: i,
+          xaxis: j
+        }];
+        if (vtl.length === 5) {
+          console.log('[victory!]', vtl);
+        }
+      } else {
+        vtl = [];
+      }
+    }
+  }
+};
+
+
+// 대각선 정방향 check 함수
+const checkOmokDiagonalFw = () => {
+  let diagonalFw = [];
+
+  let diagonalCount = checkArray[0].length - 1;
+  for (let i = 1; i < checkArray.length - 1; i++) {
+    for (let j = 1; j < diagonalCount; j++) {
+      if (checkArray[i + j - 1][j] !== 'none' && checkArray[i + j - 1][j] === checkArray[i + j - 2][j - 1]) {
+        console.log(111);
+      }
+    }
+    diagonalCount -= 1;
+  }
+};
+
+
+// 승패 확인용 배열 획득
 const setCheckArray = data => {
   let setIndex = 0;
   checkArray.forEach(innerArr => {
@@ -66,8 +112,9 @@ const setCheckArray = data => {
       setIndex += 1;
     });
   });
-  console.log(checkArray);
-  checkOmok();
+  checkOmokHzt();
+  checkOmokVtl();
+  checkOmokDiagonalFw();
 };
 
 

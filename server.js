@@ -221,6 +221,9 @@ app.patch('/turn', (req, res) => {
 // 전체 초기화
 app.patch('/omok/init', (req, res) => {
   omok = omok.map(matrix => ({ ...matrix, did: false, player: 'none' }));
+  turn = [
+    { player: 'black' }
+  ];
   res.send(omok);
 });
 
