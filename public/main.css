@@ -69,3 +69,37 @@ main {
   display: block;
   background: radial-gradient(ellipse at center, #ffffff 0%, #c4c4c4 80%, #747474 100%);
 }
+
+footer {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.footer-content {
+  width: 300px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.footer-text {
+  font-size: 20px;
+}
+
+.reset-main {
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  border: none;
+  background-color: cornflowerblue;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.set-msg {
+  margin-top: 20px;
+  color: brown;
+}
