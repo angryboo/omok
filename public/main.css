@@ -70,6 +70,10 @@ main {
   background: radial-gradient(ellipse at center, #ffffff 0%, #c4c4c4 80%, #747474 100%);
 }
 
+.stone.game-set {
+  border: 3px solid #2093ff;
+}
+
 footer {
  display: flex;
  flex-direction: column;

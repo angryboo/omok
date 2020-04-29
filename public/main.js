@@ -37,6 +37,7 @@ const init = async () => {
     if (player === 'none') {
       $goItem[i].firstElementChild.classList.remove('black');
       $goItem[i].firstElementChild.classList.remove('white');
+      $goItem[i].firstElementChild.classList.remove('game-set');
     }
   });
   getTurn();
@@ -46,7 +47,20 @@ const init = async () => {
 
 const setGame = arrData => {
   game = false;
-  $setMsg.textContent = `승리는 ${arrData[0].player} 입니다!`;
+  let idSet = [];
+  arrData.forEach(({ yaxis, xaxis }) => {
+    idSet = [...idSet, `${yaxis < 10 ? '0' + yaxis : yaxis}-${xaxis < 10 ? '0' + xaxis : xaxis}`];
+  });
+  console.log(idSet);
+  $goItem.forEach(item => {
+    idSet.forEach(id => {
+      if (item.id === id) {
+        item.firstElementChild.classList.add('game-set');
+      }
+    });
+  });
+
+  $setMsg.textContent = `${arrData[0].player === 'black' ? '흑' : '백'}이 승리하였습니다. 게임을 다시 시작해 주세요!`;
 };
 
 // 횡방향 check 함수
@@ -90,16 +104,16 @@ const checkOmokVtl = () => {
       if (checkArray[j][i] !== 'none' && checkArray[j][i] === checkArray[j - 1][i]) {
         vtl = vtl.length === 0 ? [...vtl, {
           player: checkArray[j - 1][i],
-          yaxis: i,
-          xaxis: j - 1
+          yaxis: j - 1,
+          xaxis: i
         }, {
           player: checkArray[j][i],
-          yaxis: i,
-          xaxis: j
+          yaxis: j,
+          xaxis: i
         }] : [...vtl, {
           player: checkArray[j][i],
-          yaxis: i,
-          xaxis: j
+          yaxis: j,
+          xaxis: i
         }];
         if (vtl.length === 5) {
           setGame(vtl);
