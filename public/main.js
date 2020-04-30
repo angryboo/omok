@@ -85,7 +85,6 @@ const checkOmokHzt = () => {
         }];
         if (hzt.length === 5) {
           setGame(hzt);
-          console.log('[victory!]', hzt);
         }
       } else {
         hzt = [];
@@ -117,7 +116,6 @@ const checkOmokVtl = () => {
         }];
         if (vtl.length === 5) {
           setGame(vtl);
-          console.log('[victory!]', vtl);
         }
       } else {
         vtl = [];
@@ -151,7 +149,6 @@ const checkOmokDiagonalWS = () => {
         }];
         if (diagonal.length === 5) {
           setGame(diagonal);
-          console.log('[victory! WS]', diagonal);
         }
       } else {
         diagonal = [];
@@ -186,7 +183,6 @@ const checkOmokDiagonalWN = () => {
         }];
         if (diagonal.length === 5) {
           setGame(diagonal);
-          console.log('[victory! WN]', diagonal);
         }
       } else {
         diagonal = [];
@@ -222,7 +218,6 @@ const checkOmokDiagonalES = () => {
         }];
         if (diagonal.length === 5) {
           setGame(diagonal);
-          console.log('[victory! ES]', diagonal);
         }
       } else {
         diagonal = [];
@@ -258,7 +253,6 @@ const checkOmokDiagonalEN = () => {
         }];
         if (diagonal.length === 5) {
           setGame(diagonal);
-          console.log('[victory! EN]', diagonal);
         }
       } else {
         diagonal = [];
@@ -335,7 +329,6 @@ const getAxis = target => {
 $goData.addEventListener('click', ({ target }) => {
   if (!target.matches('.go-data > div') || !game) return;
   const select = getAxis(target);
-  console.log('[select-axis]', select);
   let isPossible = false;
   omok.forEach(({ yaxis, xaxis, did }) => {
     if (+yaxis === select[0] && +xaxis === select[1]) {
@@ -350,6 +343,5 @@ $goData.addEventListener('click', ({ target }) => {
 
 // reset
 $resetMain.addEventListener('click', () => {
-  console.log(111);
   init();
 });
